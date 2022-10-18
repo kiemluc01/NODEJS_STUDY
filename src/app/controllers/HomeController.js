@@ -4,7 +4,7 @@ class HomeController {
     index(req, res) {
         Course.find({}, function(err, courses) {
             if (!err)
-                return res.json(courses)
+                return res.send(JSON.stringify(courses))
             return res.status(400).json({ err: "ERROR!!!" })
         })
 
