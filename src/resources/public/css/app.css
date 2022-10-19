@@ -1,8 +1,14 @@
 nav {
   display: flex;
-  justify-content: space-between;
   background-color: #000;
+  justify-content: space-between;
   color: #FFF;
+}
+
+.nav-menu {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 
 ul {
@@ -10,22 +16,24 @@ ul {
   padding: 0;
   margin: 0;
   display: flex;
+  width: auto;
   position: relative;
 }
 
 li {
   list-style-type: none;
   display: inline-block;
-  padding-left: 10px;
-  padding-right: 10px;
   height: 10vh;
   line-height: 10vh;
   margin: 0;
+  width: 150px;
 }
 
 a {
   text-decoration: none;
   color: #FFF;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .sub-menu {
@@ -35,7 +43,7 @@ a {
 }
 
 .sub-menu > li {
-  width: 100%;
+  display: block;
 }
 
 li:hover {
@@ -43,7 +51,22 @@ li:hover {
 }
 
 li:hover .sub-menu {
-  display: block;
+  display: block !important;
+}
+
+.account li {
+  width: 200px;
+}
+
+.footer p {
+  color: #FFF;
+  text-align: center;
+  margin-top: 0;
+}
+
+.footer {
+  height: 10vh;
+  background-color: rgb(39, 39, 39);
 }
 
 body {
@@ -52,6 +75,12 @@ body {
   font-size: 15px;
   color: #000;
   font-family: main-font;
+}
+
+.container-content {
+  height: 79vh;
+  overflow-y: auto;
+  margin-bottom: 1vh;
 }
 
 /*# sourceMappingURL=app.css.map */
