@@ -2,8 +2,9 @@ const homeRoute = require('./home');
 
 function routes(app) {
     //route
-    app.get('/', (req, res) => res.render('home'));
+
     app.use('/Home', homeRoute);
+    app.get('/', (req, res) => res.render('home'));
 }
 
 module.exports = routes;

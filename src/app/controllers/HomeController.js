@@ -12,8 +12,21 @@ class HomeController {
     }
 
     search(req, res) {
-        console.log(req.body);
-        res.send('xong!');
+        var q = req.body.q
+        console.log(q);
+        res.send('<script> alert("' + q + '"); location.href = "/" </script>');
+    }
+
+    Login(req, res) {
+        var user = req.body.user
+        var pw = req.body.pw
+        if (user == "kiemluc01" && pw == "123") {
+            var val = '<script> alert("đăng nhập thành công"); location.href = "/home" </script>'
+            res.send(val)
+        } else {
+            var val = '<script> alert("đăng nhập không thành công"); location.href = "/" </script>'
+            res.send(val)
+        }
     }
 }
 
