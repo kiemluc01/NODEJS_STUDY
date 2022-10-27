@@ -21,7 +21,7 @@ class HomeController {
         var user = req.body.user
         var pw = req.body.pw
         if (user == "kiemluc01" && pw == "123") {
-            var val = '<script> alert("đăng nhập thành công"); location.href = "/home" </script>'
+            var val = '<script> alert("đăng nhập thành công"); location.href = "/Product" </script>'
             res.send(val)
         } else {
             var val = '<script> alert("đăng nhập không thành công"); location.href = "/" </script>'

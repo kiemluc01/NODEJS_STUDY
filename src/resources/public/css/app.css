@@ -69,6 +69,40 @@ li:hover .sub-menu {
   background-color: rgb(39, 39, 39);
 }
 
+.container-product .title {
+  background-color: aquamarine;
+  padding: 10px;
+  margin: 0;
+}
+
+.product-item {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #C4C4C4 !important;
+  text-align: center;
+  margin: 15px;
+  margin-top: 20px;
+}
+
+.product-item img {
+  height: 20vh;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5px;
+}
+
+.product-item span {
+  font-weight: 100;
+}
+
+.product-item h4,
+.product-item h5 {
+  padding: 0;
+  margin: 5px;
+}
+
 body {
   padding: 0;
   margin: 0;
