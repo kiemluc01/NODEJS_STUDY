@@ -1,12 +1,20 @@
 const Course = require('../models/Course')
 
 class HomeController {
-    index(req, res) {
-        Course.find({}, function(err, courses) {
-            if (!err)
-                return res.send(JSON.stringify(courses))
-            return res.status(400).json({ err: "ERROR!!!" })
-        })
+    index(req, res, next) {
+        //callback type (req, res)
+        // Course.find({}, function(err, courses) {
+        //     if (!err)
+        //         return res.send(JSON.stringify(courses))
+        //     return res.status(400).json({ err: "ERROR!!!" })
+        // })
+
+        //peromise type (req, res, next)
+        Course.find({})
+            .then(courses => res.render('home', {
+                courses: courses // quick text: courses
+            }))
+            .catch(next)
 
         // res.render('home');
     }

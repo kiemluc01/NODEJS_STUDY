@@ -22,7 +22,7 @@ app.use(
 app.use(express.json());
 
 // set url/file static
-app.use(express.static(__dirname + '/resources/public'));
+app.use(express.static(__dirname + 'resources/public'));
 // app.console.log(__dirname)
 
 ///http logger
@@ -36,7 +36,7 @@ app.engine(
     }),
 );
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
+app.set('views', path.join(__dirname, 'resources', 'views'));
 
 //ROUTE
 routes(app);
